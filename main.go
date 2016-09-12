@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"io/ioutil"
+	"os"
+
 	"github.com/honr/vulcan/htl"
 )
 
@@ -17,6 +18,6 @@ func main() {
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 	} else {
-		fmt.Println(tree);
+		fmt.Println(tree)
 	}
 }
