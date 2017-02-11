@@ -88,7 +88,7 @@ func HandlersFromDirs(dirs []string, dev bool) (map[string]http.HandlerFunc, err
 			if err != nil {
 				return err
 			}
-			m[subpath] = h
+			m["/" + strings.TrimLeft(subpath, "/")] = h
 			return nil
 		})
 		if err != nil {
