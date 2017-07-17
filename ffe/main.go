@@ -51,5 +51,8 @@ func main() {
 	}
 
 	fmt.Println("listening on", *addr)
-	http.ListenAndServe(*addr, nil)
+	err = http.ListenAndServe(*addr, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
