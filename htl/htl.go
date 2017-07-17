@@ -345,7 +345,12 @@ func (t *Node) String() string {
 	}
 
 	if t.kind == TextNode {
-		return t.tag
+		switch t.tag {
+		case "_":
+			return "&nbsp;"
+		default:
+			return t.tag
+		}
 	}
 
 	if t.kind == ElementNode && t.tag == "" {
